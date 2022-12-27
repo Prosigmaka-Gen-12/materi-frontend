@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>selector</title>
+	<style>
+		body > div > h1 {
+			color: red;
+			text-align: center;
+		}
+
+		h1:hover {
+			color: blue;
+		}
+
+		div div h1::before {
+			content: 'hai bambang';
+			position: relative;
+			bottom: -10px;
+			left: 50px;
+		}
+		a[href='index.html'] {
+			color: salmon;
+		}
+	</style>
+</head>
+<body>
+	<h1>Aku judul luar div</h1>
+
+	<div>
+		<h1>Aku judul dalam div</h1>
+		<div>
+			<h1>Aku judul paling dalam div</h1>
+		</div>
+	</div>
+
+	<a href="index.html">ke index</a>
+	<a href="">nggak kemana mana</a>
+</body>
+</html>
