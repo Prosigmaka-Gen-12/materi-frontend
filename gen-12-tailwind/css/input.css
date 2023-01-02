@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+	.button {
+		@apply p-4 rounded-lg bg-blue-500 shadow-lg font-semibold;
+	}
+}
+
 @layer utilities {
 	.width-primary {
 		width: 500px;
