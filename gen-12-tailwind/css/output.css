@@ -518,6 +518,16 @@ video {
   background-color: rgb(147 197 253 / var(--tw-bg-opacity));
 }
 
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.bg-utama {
+  --tw-bg-opacity: 1;
+  background-color: rgb(222 240 60 / var(--tw-bg-opacity));
+}
+
 .bg-sky-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(14 165 233 / var(--tw-bg-opacity));
@@ -525,6 +535,14 @@ video {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-18 {
+  padding: 4.5rem;
+}
+
+.p-\[43px\] {
+  padding: 43px;
 }
 
 .pb-6 {
@@ -542,6 +560,16 @@ video {
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-utama {
+  --tw-text-opacity: 1;
+  color: rgb(222 240 60 / var(--tw-text-opacity));
+}
+
+.text-\[salmon\] {
+  --tw-text-opacity: 1;
+  color: rgb(250 128 114 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -562,6 +590,10 @@ video {
 
 .hover\:p-6:hover {
   padding: 1.5rem;
+}
+
+.hover\:width-primary:hover {
+  width: 500px;
 }
 
 .active\:bg-sky-700:active {
