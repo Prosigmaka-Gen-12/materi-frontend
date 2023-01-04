@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Function</title>
+</head>
+<body>
+	<button id="bambang" onclick="penjumlahan(33, 77)">
+		Lakukan penjumlahan
+	</button>
+
+	<script>
+		function penjumlahan (arg1, arg2) {
+			const hasil = arg1 + arg2
+			document.write(hasil)
+		}
+
+		const str = "Hai Bambang"
+		document.write(str.toUpperCase())
+		document.write(str.length)
+
+		console.log(document)
+
+		document.querySelector('#bambang').innerHTML = "Jumlahin dong"
+	</script>
+</body>
+</html>
