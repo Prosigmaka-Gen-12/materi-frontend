@@ -10,7 +10,7 @@
 	<button id="bambang" onclick="penjumlahan(33, 77)">
 		Lakukan penjumlahan
 	</button>
-	<button id="bimbang" onclick="penjumlahan(33, 77)">
+	<button id="bimbang" onclick="penjumlahan(225, 225)">
 		Lakukan penjumlahan
 	</button>
 
@@ -18,6 +18,12 @@
 		function penjumlahan (arg1, arg2) {
 			const hasil = arg1 + arg2
 			document.write(hasil)
+
+			if (hasil % 2 === 0) {
+				document.write('genap')
+			} else {
+				document.write('ganjil')
+			}
 		}
 
 		const str = "Hai Bambang"
