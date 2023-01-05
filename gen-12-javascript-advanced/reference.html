@@ -12,4 +12,24 @@
 	obj1.name = 'Ahmad'
 
 	document.write(obj2.name)
+
+	// cara hard copy =================
+
+	const cars1 = ['R34', 'RX8']
+	// const cars2 = ['Veyron', 'Aventador', ...cars1]
+	const cars2 = [...cars1]
+
+	cars1[0] = 'R32'
+	console.log(cars2)
+
+	const garage = {
+		mobil: 'Avanza',
+		motor: 'Supra'
+	}
+
+	// const garage2 = {sepeda: 'polygon', ...garage}
+	const garage2 = {...garage}
+	garage.mobil = 'Kijang'
+	console.log(garage2)
+
 </script>
