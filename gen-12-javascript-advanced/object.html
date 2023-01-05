@@ -17,12 +17,22 @@
 				width: 7,
 				length: 15,
 				height: 2
+			},
+
+			start: function () {
+				alert('Komputer Nyala')
+			},
+			shutdown: () => alert('Komputer Mati'),
+			sleep () {
+				alert('Komputer Tidur')
 			}
 		}
 
 		laptop.dimension.weight = 2
 
 		document.write(laptop.dimension.weight)
+
+		laptop.sleep()
 	</script>
 </body>
 </html>
