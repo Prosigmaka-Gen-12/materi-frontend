@@ -25,14 +25,23 @@
 			shutdown: () => alert('Komputer Mati'),
 			sleep () {
 				alert('Komputer Tidur')
+			},
+			showDescription () {
+				// alert(this.brand + ' ' + this.type)
+				// this.shutdown()
+				console.log(this)
+			},
+			badThis: () => {
+				console.log(this)
 			}
 		}
+
 
 		laptop.dimension.weight = 2
 
 		document.write(laptop.dimension.weight)
 
-		laptop.sleep()
+		laptop.showDescription()
 	</script>
 </body>
 </html>
