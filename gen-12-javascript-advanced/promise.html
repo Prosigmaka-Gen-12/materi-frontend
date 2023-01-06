@@ -19,4 +19,21 @@
 		.catch((err) => console.log(err))
 
 	console.log('<br> aku dibawah cek')
+
+	// promise with argument ======================
+
+	function perkalian (x, y) {
+		return new Promise((resolve, reject) => {
+			if (typeof x !== 'number' || typeof y !== 'number') {
+				reject('Argumen tidak valid')
+			}
+
+			const hasil = x * y
+			resolve(hasil)
+		})
+	}
+
+	perkalian(20, 30)
+		.then((res) => console.log(res))
+		.catch((err) => console.error(err))
 </script>
