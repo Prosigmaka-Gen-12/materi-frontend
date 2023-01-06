@@ -36,4 +36,22 @@
 	perkalian(20, 30)
 		.then((res) => console.log(res))
 		.catch((err) => console.error(err))
+
+	// contoh perbandingan ==========================
+
+	pembagian(20, 30)
+		.then((res) => console.log(res))
+		.catch((err) => console.error(err))
+
+	penjumlahan(20, 30)
+		.then((res) => console.log(res))
+		.catch((err) => console.error(err))
+
+	try {
+		const hasil_perkalian = await perkalian(20, 30)
+		const hasil_pembagian = await pembagian(20, 30)
+		const hasil_penjumlahan = await penjumlahan(20, 30)
+	} catch (err) {
+		console.log(err)
+	}
 </script>
