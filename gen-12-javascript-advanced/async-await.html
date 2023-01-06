@@ -1,5 +1,7 @@
 <script>
 	async function diskon (harga, persen) {
+		await new Promise(r => setTimeout(r, 2000))
+
 		if (harga < 0) {
 			throw 'Harga tidak boleh kurang dari 0'
 		}
@@ -8,7 +10,16 @@
 		return hasil
 	}
 
-	diskon(75000, 60)
-		.then((res) => console.log('Anda cukup bayar ' + res))
-		.catch((err) => console.error(err))
+	async function main () {
+		try {
+			console.log('saya di atas')
+			const ygharusdibayar = await diskon(-40000, 25)
+			console.log('saya di bawah')
+			console.log(ygharusdibayar)
+		} catch (err) {
+			console.log(err)
+		}
+	}
+
+	main()
 </script>
