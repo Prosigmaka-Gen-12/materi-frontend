@@ -1,0 +1,14 @@
+<script>
+	async function diskon (harga, persen) {
+		if (harga < 0) {
+			throw 'Harga tidak boleh kurang dari 0'
+		}
+
+		const hasil = harga - (harga * persen / 100)
+		return hasil
+	}
+
+	diskon(75000, 60)
+		.then((res) => console.log('Anda cukup bayar ' + res))
+		.catch((err) => console.error(err))
+</script>
