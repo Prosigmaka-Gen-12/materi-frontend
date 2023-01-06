@@ -1,0 +1,22 @@
+<script>
+	const checkSecond = new Promise(function (resolve, reject) {
+		const date = new Date()
+		const second = date.getSeconds()
+
+		setTimeout(function () {
+			if (second % 2 === 0) {
+				resolve(second)
+			} else {
+				reject('Detiknya ganjil, detik sekarang: ' + second)
+			}
+		}, 5000)
+	})
+
+	console.log('aku diatas cek <br>')
+
+	checkSecond
+		.then((result) => console.log(result))
+		.catch((err) => console.log(err))
+
+	console.log('<br> aku dibawah cek')
+</script>
