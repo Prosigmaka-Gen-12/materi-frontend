@@ -1,0 +1,12 @@
+<script>
+function penjumlahan (x, y, outputHandler) {
+	const hasil = x + y
+	outputHandler(hasil)
+}
+
+penjumlahan(1, 2, function (arg) {
+	document.write(arg)
+})
+penjumlahan(10, 20, (param) => alert(param))
+penjumlahan(100, 200, console.log)
+</script>
