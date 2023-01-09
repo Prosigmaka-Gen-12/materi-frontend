@@ -1,0 +1,23 @@
+<select></select>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+	const products = [
+		{
+			id: 1,
+			name: 'Pantene',
+			price: 24000
+		},
+		{
+			id: 2,
+			name: 'Shinzui',
+			price: 3000
+		},
+	]
+
+	for (i = 0; i < products.length; i++) {
+		const product = products[i]
+		$('select').append('<option value="' + product.id + '">' + product.name + '</option>')
+	}
+
+</script>
