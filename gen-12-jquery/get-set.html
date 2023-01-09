@@ -1,0 +1,33 @@
+<h1>Ice Cream Favors</h1>
+
+<ul>
+	<li>Banana</li>
+	<li>Choco Banana</li>
+	<li>Choco Mint</li>
+</ul>
+
+<input type="text">
+<button>submit</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+	// get
+	const h1_text = $('h1').text()
+	console.log(h1_text)
+
+	// set
+	$('h1').text('Ice Cream List')
+
+	// html
+	const ul_content = $('ul').html()
+	console.log(ul_content)
+
+	$('ul').html(`<li>Papaya</li>`)
+
+	$('button').click(function () {
+		const input_value = $('input').val()
+		console.log(input_value)
+
+		$('input').val('Boboiboy')
+	})
+</script>
