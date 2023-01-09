@@ -8,10 +8,13 @@
 </head>
 <body>
 	<h1>Hello World!</h1>
+	<h1>Hello Sky!</h1>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<script>
-		$('h1').hide(3000)
+		$('h1').click(function () {
+			$(this).hide(3000)
+		})
 	</script>
 </body>
 </html>
