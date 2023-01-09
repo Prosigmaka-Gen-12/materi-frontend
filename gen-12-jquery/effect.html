@@ -1,0 +1,20 @@
+<h1>Target Element</h1>
+
+<button id="hide">Sembunyikan</button>
+<button id="show">Munculkan</button>
+<button id="oncomplete">Keduanya</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+	$('#hide').click(function () {
+		$('h1').hide(1000)
+	})
+	$('#show').click(function () {
+		$('h1').show('fast')
+	})
+	$('#oncomplete').click(function () {
+		$('h1').hide('fast', function () {
+			$(this).show('slow')
+		})
+	})
+</script>
