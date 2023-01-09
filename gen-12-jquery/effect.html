@@ -12,9 +12,12 @@
 	$('#show').click(function () {
 		$('h1').show('fast')
 	})
-	$('#oncomplete').click(function () {
+	/* $('#oncomplete').click(function () {
 		$('h1').hide('fast', function () {
 			$(this).show('slow')
 		})
+	}) */
+	$('#oncomplete').click(function () {
+		$('h1').hide('fast').show('slow').slideUp().fadeIn()
 	})
 </script>
