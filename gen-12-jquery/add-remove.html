@@ -1,0 +1,20 @@
+<h1>Laptop Brand List</h1>
+
+<ul>
+	<li>ASUS</li>
+	<li>Acer</li>
+	<li>Lenovo</li>
+</ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+	$('ul').append('<li>DELL</li>')
+
+	const title = $('h1')
+	$('ul').prepend(title)
+
+	$('ul li:last-child').before('<li>Alienware</li>')
+	$('ul li:last-child').after('<li>Vaio</li>')
+
+	$('ul li:last-child').remove()
+</script>
