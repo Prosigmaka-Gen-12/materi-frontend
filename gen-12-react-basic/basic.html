@@ -4,9 +4,9 @@
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel">
-	function Greeting () {
-		return <button onClick={() => alert('Hai Bambang')} >
-			Say Hello!
+	function Greeting (props) {
+		return <button onClick={() => alert('Hai ' + props.name)} >
+			{props.label}
 		</button>
 	}
 
@@ -15,7 +15,9 @@
 
 		return <>
 			<h1>Hai {name}</h1>
-			<Greeting />
+			<Greeting name="Bambang" label="Say Hi!" />
+			<Greeting name="Saiful" label="Selamat!"/>
+			<Greeting name="Bahar" label="Halo!"/>
 			<h2>Hai Bambang</h2>
 		</>
 	}
