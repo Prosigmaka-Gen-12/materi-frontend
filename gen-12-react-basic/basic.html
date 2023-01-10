@@ -4,8 +4,20 @@
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel">
-	function App () {
-		return <h1>Hai Bambang</h1>
+	function Greeting () {
+		return <button onClick={() => alert('Hai Bambang')} >
+			Say Hello!
+		</button>
+	}
+
+	function App () { // functional component
+		let name = 'Bambang'
+
+		return <>
+			<h1>Hai {name}</h1>
+			<Greeting />
+			<h2>Hai Bambang</h2>
+		</>
 	}
 
 	const container = document.getElementById('root')
