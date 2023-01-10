@@ -5,16 +5,18 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel">
 	function Greeting (props) {
-		return <button onClick={() => alert('Hai ' + props.name)} >
+		return <button onClick={() => alert('Hi ' + props.name)} >
 			{props.label}
 		</button>
 	}
 
 	function App () { // functional component
-		let name = 'Bambang'
+		const [name, setName] = React.useState('Bambang')
 
 		return <>
-			<h1>Hai {name}</h1>
+			<h1 onClick={() => setName('Suyatno')}>
+				Hai {name}
+			</h1>
 			<Greeting name="Bambang" label="Say Hi!" />
 			<Greeting name="Saiful" label="Selamat!"/>
 			<Greeting name="Bahar" label="Halo!"/>
@@ -25,4 +27,5 @@
 	const container = document.getElementById('root')
 	const root = ReactDOM.createRoot(container)
 	root.render(<App />)
+
 </script>
