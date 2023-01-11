@@ -12,7 +12,12 @@ function App () {
       Ubah Hobi
     </button>
 
-    <ClassExample hobby={hobby} />
+    {hobby === 'Cooking'
+      ? <ClassExample hobby={hobby} />
+      : null}
+
+
+
   </>
 }
 

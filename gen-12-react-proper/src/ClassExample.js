@@ -21,6 +21,10 @@ class ClassExample extends Component {
 		console.log('State Sekarang', this.state)
 	}
 
+	componentWillUnmount () {
+		console.log('ini will unmount')
+	}
+
 	render () {
 		console.log('ini render')
 		return <>
