@@ -24,6 +24,7 @@ class ClassExample extends Component {
 			<ul>
 				<li>namaku: {this.state.name}</li>
 				<li>umurku: {this.state.age}</li>
+				<li>hobiku: {this.props.hobby}</li>
 			</ul>
 			<button onClick={() => this.setState({ name: 'Bambang' }) }>
 				Ubah Nama
