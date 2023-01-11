@@ -11,13 +11,13 @@
 	}
 
 	function App () { // functional component
-		const [name, setName] = React.useState('Bambang')
+		const [nama, ubahNama] = React.useState('Bambang')
 
 		return <>
-			<h1 onClick={() => setName('Suyatno')}>
-				Hai {name}
+			<h1 onClick={() => ubahNama('Suyatno')}>
+				Hai {nama}
 			</h1>
-			<Greeting name="Bambang" label="Say Hi!" />
+			<Greeting name={nama} label="Say Hi!" />
 			<Greeting name="Saiful" label="Selamat!"/>
 			<Greeting name="Bahar" label="Halo!"/>
 			<h2>Hai Bambang</h2>
@@ -27,5 +27,4 @@
 	const container = document.getElementById('root')
 	const root = ReactDOM.createRoot(container)
 	root.render(<App />)
-
 </script>
