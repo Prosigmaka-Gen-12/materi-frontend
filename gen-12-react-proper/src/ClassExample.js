@@ -13,8 +13,12 @@ class ClassExample extends Component {
 		console.log('ini did mount')
 	}
 
-	componentDidUpdate () {
+	componentDidUpdate (prevProps, prevState) {
 		console.log('ini did update')
+		console.log('Props Sebelumnya', prevProps)
+		console.log('Props Sekarang', this.props)
+		console.log('State Sebelumnya', prevState)
+		console.log('State Sekarang', this.state)
 	}
 
 	render () {
