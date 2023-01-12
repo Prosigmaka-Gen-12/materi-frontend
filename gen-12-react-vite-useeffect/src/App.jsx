@@ -1,5 +1,7 @@
+import { useState } from "react"
+
 function App () {
-  const cars = [
+  const [cars, setCars] = useState([
     {
       id: 1,
       make: 'Subaru',
@@ -18,16 +20,31 @@ function App () {
       model: 'RX 7',
       year: '2002'
     }
-  ]
+  ])
+
+  const addCar = () => {
+    const newCar = {
+      id: 4,
+      make: 'Toyota',
+      model: 'Supra MK4',
+      year: '1993'
+    }
+    const carsCopy = [...cars, newCar]
+    setCars(carsCopy)
+  }
 
   return <>
-    <h1>Hai Bambang</h1>
+    <h1>JDM List</h1>
 
     {cars.map(car =>
       <p key={car.id}>
         {car.make} {car.model}
       </p>
     )}
+
+    <button onClick={addCar}>
+      Add New Car
+    </button>
   </>
 }
 
