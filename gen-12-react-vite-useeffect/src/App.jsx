@@ -33,12 +33,22 @@ function App () {
     setCars(carsCopy)
   }
 
+  const removeCar = removeId => {
+    const carIndex = cars.findIndex((car) => car.id === removeId)
+    const copyCars = [...cars]
+    copyCars.splice(carIndex, 1)
+    setCars(copyCars)
+  }
+
   return <>
     <h1>JDM List</h1>
 
     {cars.map(car =>
       <p key={car.id}>
-        {car.make} {car.model}
+        {car.make} {car.model} &nbsp;
+        <button onClick={() => removeCar(car.id)}>
+          - remove
+        </button>
       </p>
     )}
 
