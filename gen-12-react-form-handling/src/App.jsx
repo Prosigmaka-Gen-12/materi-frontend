@@ -1,32 +1,38 @@
 import { useState } from 'react'
 
-function App() {
-  const [email, setEmail] = useState('abid@test.com')
-  const [birthDate, setBirthDate] = useState('')
-  const [religion, setReligion] = useState('')
-  const [gender, setGender] = useState('p')
+function App () {
+  const [formInput, setFormInput] = useState({
+    email: 'b@mbang.com',
+    birthDate: '2000-05-04',
+    religion: 'islam',
+    gender: 'l',
+  })
+  const [isLoading, setIsLoading] = useState('')
+
+  const handleInput = (type, value) => {
+    // cara 1
+    const copyFormInput = {...formInput}
+    copyFormInput[type] = value
+    setFormInput(copyFormInput)
+
+    // cara 2
+    // setFormInput({ ...formInput, [type]: value })
+  }
 
   return <>
-    <h3>Input Value</h3>
-    {email} <br />
-    {birthDate} <br />
-    {religion} <br />
-    {gender} <br />
-    <hr />
-
     <label>
       Email:
-      <input type="text" value={email} onChange={(evt) => setEmail(evt.target.value)} />
+      <input type="text" value={formInput.email} onChange={(evt) => handleInput('email', evt.target.value)} />
     </label>
     <br />
     <label>
       Tanggal Lahir:
-      <input type="date" value={birthDate} onChange={(evt) => setBirthDate(evt.target.value)} />
+      <input type="date" value={formInput.birthDate} onChange={(evt) => handleInput('birthDate', evt.target.value)} />
     </label>
     <br />
     <label>
       Agama:
-      <select value={religion} onChange={(evt) => setReligion(evt.target.value)}>
+      <select value={formInput.religion} onChange={(evt) => handleInput('religion', evt.target.value)}>
         <option value=""></option>
         <option value="islam">islam</option>
         <option value="kristen protestan">kristen protestan</option>
@@ -40,11 +46,11 @@ function App() {
 
     <p>Jenis Kelamin</p>
     <label>
-      <input type="radio" value="l" checked={gender === 'l'} onChange={() => setGender('l')} />
+      <input type="radio" value="l" checked={formInput.gender === 'l'} onChange={() => handleInput('gender', 'l')} />
       Laki Laki
     </label>
     <label>
-      <input type="radio" value="p" checked={gender === 'p'} onChange={() => setGender('p')} />
+      <input type="radio" value="p" checked={formInput.gender === 'p'} onChange={() => handleInput('gender', 'p')} />
       Perempuan
     </label>
   </>
