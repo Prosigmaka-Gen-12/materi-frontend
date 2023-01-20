@@ -1,10 +1,15 @@
 import { useState } from 'react'
+import useForm from './useForm'
 
 function App () {
+  const { formInput, handleInput } = useForm({
+    email: 'b@mbang.com',
+    birthDate: '2000-05-04',
+    religion: 'islam',
+    gender: 'l',
+  })
 
   const [isLoading, setIsLoading] = useState('')
-
-
 
   const submitForm = (evt) => {
     evt.preventDefault()

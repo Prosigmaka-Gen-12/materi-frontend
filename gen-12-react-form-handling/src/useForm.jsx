@@ -1,10 +1,7 @@
-function useForm () { // hook / composable
-	const [formInput, setFormInput] = useState({
-		email: 'b@mbang.com',
-		birthDate: '2000-05-04',
-		religion: 'islam',
-		gender: 'l',
-	})
+import { useState } from 'react'
+
+function useForm (defaultValue) { // hook / composable
+	const [formInput, setFormInput] = useState(defaultValue)
 
 	const handleInput = (type, value) => {
 		// cara 1
@@ -21,3 +18,5 @@ function useForm () { // hook / composable
 		handleInput
 	}
 }
+
+export default useForm
