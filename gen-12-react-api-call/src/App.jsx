@@ -24,6 +24,20 @@ function App() {
     }
   }
 
+  const postApi = () => {
+    const payload = {
+      title: "Test Buat Post Baru",
+      body: "Test Body",
+      userId: 15,
+      tags: ["fiction", "mystery", "english"],
+      reactions: 7
+    }
+
+    axios.post('https://dummyjson.com/posts/add', payload)
+      .then(res => console.log(res.data))
+      .catch(err => console.log(err))
+  }
+
   return isLoading
   ? <h1>Loading...</h1>
   : <>
@@ -33,6 +47,9 @@ function App() {
     </button>
     <button onClick={testApiAsyncAwait}>
       Test Api Async Await
+    </button>
+    <button onClick={postApi}>
+      Test postApi
     </button>
   </>
 }
