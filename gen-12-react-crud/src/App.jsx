@@ -17,9 +17,14 @@ function App() {
     setUsers(res.data)
   }
 
-  const createUser = async (evt) => {
+  const handleSubmit = async (evt) => {
     evt.preventDefault()
-    await axios.post('http://localhost:3000/users', formInput)
+
+    const isEdit = !!formInput.id
+
+    if (isEdit) await axios.put('http://localhost:3000/users/' + formInput.id, formInput)
+    else await axios.post('http://localhost:3000/users', formInput)
+
     setFormInput({ ...defaultInput })
     getAllUser()
   }
@@ -29,6 +34,11 @@ function App() {
     getAllUser()
   }
 
+  const prepareEdit = async id => {
+    const res = await axios.get('http://localhost:3000/users/' + id)
+    setFormInput(res.data)
+  }
+
   useEffect(() => {
     getAllUser()
   }, [])
@@ -36,7 +46,7 @@ function App() {
   return <>
     <h1>Form User</h1>
 
-    <form onSubmit={createUser}>
+    <form onSubmit={handleSubmit}>
       <label>
         Name: &nbsp;
         <input type="text" value={formInput.name} onChange={evt => handleFormInput('name', evt.target.value)} />
