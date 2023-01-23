@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Abid",
+      "age": 17
+    },
+    {
+      "id": 2,
+      "name": "Bambang",
+      "age": 32
+    },
+    {
+      "name": "Ryan Gosling",
+      "age": 35,
+      "id": 3
+    }
+  ]
+}
