@@ -20,7 +20,7 @@ function App() {
   const handleSubmit = async (evt) => {
     evt.preventDefault()
 
-    const isEdit = !!formInput.id
+    const isEdit = !!formInput.id // boolean casting
 
     if (isEdit) await axios.put('http://localhost:3000/users/' + formInput.id, formInput)
     else await axios.post('http://localhost:3000/users', formInput)
