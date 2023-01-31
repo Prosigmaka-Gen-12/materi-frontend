@@ -3,9 +3,7 @@ import Header from "./Header"
 
 function App() {
   return <>
-    <Header>
-      bambang
-    </Header>
+    <Header />
     <h1>ini context</h1>
     <Footer />
   </>

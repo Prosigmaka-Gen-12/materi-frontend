@@ -16,7 +16,8 @@ export default function UserProvider (props) {
 		name,
 		age,
 		setName,
-		setAge
+		setAge,
+		contohKeyBiasa: 'Hai Bambang'
 	}
 
 	return <UserContext.Provider value={shareValue}>
