@@ -2,7 +2,7 @@ import { createContext, useState } from "react"
 
 export const UserContext = createContext()
 
-export default function UserProvider (props) {
+export default function UserProvider ({ children }) {
 	const [name, setName] = useState('Bambang')
 	const [age, setAge] = useState(17)
 
@@ -21,6 +21,6 @@ export default function UserProvider (props) {
 	}
 
 	return <UserContext.Provider value={shareValue}>
-		{props.children}
+		{children}
 	</UserContext.Provider>
 }
