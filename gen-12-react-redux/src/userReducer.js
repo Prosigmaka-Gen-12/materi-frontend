@@ -11,6 +11,8 @@ function userReducer(state = initialState, action) {
 			return { ...state, age: action.payload }
 		case 'user/reset':
 			return { ...initialState }
+		default:
+			return state
 	}
 }
 
