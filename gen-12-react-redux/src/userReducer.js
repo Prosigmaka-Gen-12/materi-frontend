@@ -9,5 +9,9 @@ function userReducer(state = initialState, action) {
 			return { ...state, name: action.payload }
 		case 'user/change_age':
 			return { ...state, age: action.payload }
+		case 'user/reset':
+			return { ...initialState }
 	}
 }
+
+export default userReducer
