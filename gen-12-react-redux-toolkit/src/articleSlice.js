@@ -24,5 +24,6 @@ export const articleSlice = createSlice({
 	}
 })
 
+
 export const { change_title, change_body_and_author, reset_value } = articleSlice.actions
 export default articleSlice.reducer
